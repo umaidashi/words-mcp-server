@@ -1,27 +1,27 @@
 {
-  "name": "words-mcp-server",
-  "version": "1.0.0",
-  "main": "index.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.6.1",
-    "zod": "^3.24.2"
-  },
-  "devDependencies": {
-    "@types/node": "^22.13.8",
-    "typescript": "^5.8.2"
-  },
-  "type": "module",
-  "bin": {
-    "words-mcp-server": "./build/index.js"
-  },
-  "scripts": {
-    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\""
-  },
-  "files": [
-    "build"
-  ]
+	"name": "words-mcp-server",
+	"version": "1.0.0",
+	"main": "index.js",
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"@modelcontextprotocol/sdk": "^1.6.1",
+		"zod": "^3.24.2"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@types/node": "^22.13.8",
+		"typescript": "^5.8.2"
+	},
+	"type": "module",
+	"bin": {
+		"words-mcp-server": "./build/index.js"
+	},
+	"scripts": {
+		"build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+		"lint": "biome check --write"
+	},
+	"files": ["build"]
 }
